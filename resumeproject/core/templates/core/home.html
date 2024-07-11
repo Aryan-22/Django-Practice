@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+<div class="mt-5">
+    <div class="text-white mt-5 mx-5 text-justify animate-fadeIn">
+        <h1 class="text-warning mb-5 border-bottom headings"><b>ABOUT ME</b></h1>
+
+        <div class="px-4 ss-color">
+            <p style="text-indent: 100px; font-family: Verdana;">
+                <br>
+                I am a passionate Machine Learning and Data Science enthusiast with a strong portfolio of Python projects that demonstrate the practical application of theoretical knowledge. My background includes developing models for predictive analytics, optimizing algorithms, and harnessing data to drive strategic decisions.
+                <br><br>
+                I have experience working on cross-functional projects where I integrated machine learning software with various systems to achieve impactful results. I approach each challenge with both creative and analytical thinking, aiming to develop innovative solutions that address real-world problems.
+                <br><br>
+                Excited about future opportunities, I am eager to explore unique and groundbreaking projects in the field. My strong problem-solving skills and passion for innovation drive me to continuously seek out new challenges and contribute meaningfully to the advancement of data science and machine learning.
+                <br><br>
+                In summary, I am a dedicated and forward-thinking professional committed to leveraging data science to solve complex problems and drive progress in the field.
+            </p>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me?/Contact Me</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

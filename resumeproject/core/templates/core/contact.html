@@ -1,0 +1,53 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="container mt-5 animate-fadeIn">
+    <h1 class="text-warning mb-5 border-bottom headings"><b>CONTACT ME</b></h1>
+    <div class="row mb-5">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+            <form action="">
+                <div class="form-row text-white">
+                    <div class="form-group col-md-6">
+                        <label for="inputName"><i>Your Name</i></label>
+                        <input type="text" class="form-control" id="inputName" required />
+                    </div>
+                    <br>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail"><i>Your Email</i>*</label>
+                        <input type="email" class="form-control" id="inputEmail" required />
+                    </div>
+                    <br>
+                    <div class="form-group col-md-12">
+                        <label for="inputSubject"><i>Your Subject</i></label>
+                        <input type="text" class="form-control" id="inputSubject" />
+                    </div>
+                    <br>
+                    <div class="form-group col-md-12">
+                        <label for="inputTextarea"><i>Your Email*</i></label>
+                        <textarea class="form-control" id="inputTextarea" required></textarea>
+                    </div>
+                    <br>
+           
+                        <button class="btn btn-outline-warning my-3 mr-5">Send</button>
+           
+                   
+                </div>
+            </form>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-lg-4 text-center text-lg-start text-white">
+
+            <ul class="list-unstyled i-colo">
+                <li>
+                    <i class="fa-solid fa-location-dot"></i> Greater Noida West, Uttar Pradesh
+                </li>
+                <br>
+                <li>
+                    <i class="fa-solid fa-envelope"></i> aryantarafdar03@gmail.com
+                </li>
+                <br>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}

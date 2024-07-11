@@ -1,0 +1,50 @@
+html,body{
+  height: 100%;
+  margin: 0;
+
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container-fluid{
+  min-height: 100%;
+  background-size: auto;
+}
+.i-colo{
+  color:goldenrod;
+  
+}
+.ss-color{
+color:whitesmoke;
+}
+a.nav-link{
+
+  color:whitesmoke;
+}
+a.nav-link:hover{
+  color:black;
+  background-color: goldenrod;
+}
+a.nav-link.active{
+  color:black;
+  background-color: goldenrod;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out; /* 1s duration, ease-in-out timing function */
+}
+.headings
+{
+  font-family: monospace;
+}

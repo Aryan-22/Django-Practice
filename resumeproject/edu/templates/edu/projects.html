@@ -1,0 +1,61 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="container mt-5 animate-fadeIn">
+    <h1 class="text-warning mb-5 border-bottom headings"><b>PROJECTS</b></h1>
+    <div class="row text-white">
+            <h3>
+                <i>Soil-O-Culture</i>
+                <a href="https://huggingface.co/spaces/Aryan-24/Soil-O-Culture#15e6b732" class="btn btn-outline-warning my-3 mr-5" style="color: #007bff; border-color: #007bff; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">Live Link</a>
+                <a href="https://github.com/Aryan-22/Soil-O-Culture" class="btn btn-outline-warning my-3 mr-5" style="color: #28a745; border-color: #28a745; background-color: transparent;" onmouseover="this.style.backgroundColor='#28a745'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#28a745';">Github Link</a>
+
+
+            </h3>
+            <p>
+                Developed a crop recommendation system using Python’s Scikit-learn and Pandas libraries. Trained models
+including Decision Tree, Logistic Regression, Support Vector Machine, Random Forest to assist
+farmers in selecting suitable crops for the given weather and soil conditions.
+
+            </p>
+
+
+    </div>
+    <div class="row text-white">
+        <h3>
+            <i>Attendance System </i>
+            <a href="#" class="btn btn-outline-warning my-3 mr-5" style="color: #007bff; border-color: #007bff; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">Live Link</a>
+            <a href="https://github.com/Aryan-22/AttendanceSystemUsingFaceRecognition" class="btn btn-outline-warning my-3 mr-5" style="color: #28a745; border-color: #28a745; background-color: transparent;" onmouseover="this.style.backgroundColor='#28a745'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#28a745';">Github Link</a>
+
+
+        </h3>
+        <p>
+            Built a real-time face recognition-based attendance system utilizing Opencv library, integrated with Firebase for
+secure storage of images and student data.
+
+        </p>
+
+
+</div>
+<div class="row text-white">
+    <h3>
+        <i>Digit Classification</i>
+        <a href="#" class="btn btn-outline-warning my-3 mr-5" style="color: #007bff; border-color: #007bff; background-color: transparent;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';">Live Link</a>
+        <a href="https://github.com/Aryan-22/Digit-Classification" class="btn btn-outline-warning my-3 mr-5" style="color: #28a745; border-color: #28a745; background-color: transparent;" onmouseover="this.style.backgroundColor='#28a745'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#28a745';">Github Link</a>
+
+
+    </h3>
+    <p>
+        Implemented a digit classification system in Python using the MNIST dataset.Used Numpy and Pandas for basic
+        preprocessing and then using Tensorflow/keras library implemented a Convolutional Neural Network which
+        classifies the Digits correctly.
+        
+
+    </p>
+
+
+    <div class ="text-center" >
+
+        <a href="{% url "contact" %}" class="btn btn-outline-warning my-3 mr-5">Hire Me?/Contact Me</a>
+    
+    </div>
+{% endblock content %}
+
