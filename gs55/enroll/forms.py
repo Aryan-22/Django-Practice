@@ -16,3 +16,10 @@ class EditUserProfileForm(UserChangeForm):
         labels = {'email':'Email'} 
         
 
+class EditAdminForm(UserChangeForm):
+    password = None
+    class Meta:
+        model = User
+        fields = '__all__'
+        labels = {'email':'Email'} 
+
