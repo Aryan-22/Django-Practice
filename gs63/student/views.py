@@ -1,0 +1,27 @@
+from django.shortcuts import render
+
+# Create your views here.
+def setsession(request):
+    request.session["name"] = "aryan"
+
+
+
+    return render(request,'student/setsession.html')
+
+
+def getsession(request):
+    name = request.session["name"]
+    keys = request.session.keys()
+    print(request.session.get_session_cookie_age())
+    print(request.session.get_expiry_age())
+    print(request.session.get_expiry_date())
+    print(request.session.get_expire_at_browser_close())
+
+
+    return render(request,'student/getsession.html',{"name":name})
+
+
+def delsession(request):
+    request.session.flush()
+    request.session.clear_expired()
+    return render(request,"student/delsession.html")
