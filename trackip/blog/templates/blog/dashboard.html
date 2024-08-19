@@ -1,0 +1,76 @@
+{% extends "blog/base.html" %}
+{% block side %}
+
+{% if messages %}
+{% for message in messages %}
+<p {% if message.tags %} class = "alert alert-{{ message.tags}} mb-5"{% endif %}>{{message}}</p>
+{% endfor %}
+
+{% endif %}
+<div class = "col-sm-2 text-white my-5 text-center">
+<h4 class = "my-5">Profile</h4>
+<h5>{{full_name}}</h5>
+{% for group in groups %}
+<p>{{group.name}}</p>
+{% endfor %}
+<h5 class = "mt-3">Your IP:{{ip}}</h5>
+<h5>User Id:{{request.user.id}}</h5>
+
+</div>
+{% endblock side %}
+{% block content %}
+<div class="col-sm-10">
+    <h3 class = "text-white my-5">Dashboard  Page</h3>
+    <a href="{% url "add" %}" class = "btn btn-success">Add Post</a>
+    <h4 class = "text-center alert alert-info mt-3">Show Post Information</h4>
+    {% if posts %}
+    <table class = "table table-hover bg-white">
+        <thead>
+            <tr class = "text-center">
+                <th scope= "col" style="width: 2%;">Post ID</th>
+                <th scope= "col" style="width: 2%;">User ID</th>
+                <th scope= "col" style="width: 28%;">Title</th>
+                <th scope= "col" style="width: 55%;">Description</th>
+                <th scope= "col" style="width: 15%;">Action</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+
+            {% if post.user.id == request.user.id or request.user.is_superuser%}
+
+
+            <tr>
+                <th scope = "row">{{post.id}}</th>
+                <td>{{request.user.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.desc}}</td>
+                <td class="text-center">
+                    <a href="{% url "update" post.id%}" class = "btn btn-warning btn-sm">Edit</a>
+
+                
+                    <form action="{% url "delete" post.id%}" method = "POST" class= "d-inline">
+                        {% csrf_token %}
+                        <input type="Submit" class = "btn btn-danger btn-sm" value="Delete">
+
+                    </form>
+                
+                </td>
+            
+            </tr>
+            {% endif %}
+            {% endfor %}
+           
+        </tbody>
+
+    </table>
+    {% else %}
+    <p>No records</p>
+    {% endif %}
+
+
+</div>
+{% endblock content %}
